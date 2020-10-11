@@ -1,7 +1,7 @@
+const InternalServerError = require('../helpers/internal-server-error')
 const LoginRouter = require('./login-router')
 const MissingParamError = require('../helpers/missing-param-error')
 const UnauthorizedError = require('../helpers/unauthorized-error')
-const InternalServerError = require('../helpers/internal-server-error')
 
 const makeSut = () => {
   const authUseCaseSpy = makeAuthUsecase()
