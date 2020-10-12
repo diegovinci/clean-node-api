@@ -1,8 +1,5 @@
-const InternalServerError = require('../helpers/internal-server-error')
-const InvalidParamError = require('../helpers/invalid-param-error')
 const LoginRouter = require('./login-router')
-const MissingParamError = require('../helpers/missing-param-error')
-const UnauthorizedError = require('../helpers/unauthorized-error')
+const { InternalServerError, InvalidParamError, MissingParamError, UnauthorizedError } = require('../errors')
 
 const makeSut = () => {
   const authUseCaseSpy = makeAuthUsecase()
@@ -166,7 +163,7 @@ describe('Login Router', () => {
   })
 
   test('Should return 500 if AuthUseCase has no auth method', async () => {
-    class AuthUseCaseSpy {}
+    class AuthUseCaseSpy { }
     const authUseCase = new AuthUseCaseSpy()
     const sut = new LoginRouter(authUseCase)
     const httpRequest = {
@@ -209,7 +206,7 @@ describe('Login Router', () => {
   })
 
   test('Should return 500 if no EmailValidator has no isValid method', async () => {
-    class EmailValidator {}
+    class EmailValidator { }
     const authUseCaseSpy = makeAuthUsecase()
     const emailValidatorSpy = new EmailValidator()
     const sut = new LoginRouter(authUseCaseSpy, emailValidatorSpy)

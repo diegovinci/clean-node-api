@@ -1,5 +1,4 @@
-const UnauthorizedError = require('./unauthorized-error')
-const InternalServerError = require('./internal-server-error')
+const { InternalServerError, UnauthorizedError } = require('../errors')
 
 module.exports = class HttpResponse {
   static ok (data) {
