@@ -256,7 +256,6 @@ describe('Auth UseCase', () => {
         encrypter,
         tokenGenerator,
         updateAccessTokenRepository: makeUpdateAccessTokenRepositoryWithError()
-
       })
     ]
     for (const sut of suts) {
