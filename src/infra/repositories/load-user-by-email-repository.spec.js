@@ -49,12 +49,12 @@ describe('LoadUserByEmail Repository', () => {
   test('Should throw an error if no userModel is provided', async () => {
     const sut = new LoadUserByEmailRepository()
     const promise = sut.load('any_email@mail.com')
-    expect(promise).rejects.toThrow()
+    await expect(promise).rejects.toThrow()
   })
 
   test('Should throw an error if no email is provided', async () => {
     const { sut } = makeSut()
     const promise = sut.load()
-    expect(promise).rejects.toThrow(new MissingParamError('email'))
+    await expect(promise).rejects.toThrow(new MissingParamError('email'))
   })
 })
