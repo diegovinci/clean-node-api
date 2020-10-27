@@ -7,8 +7,8 @@
     "test": "jest --colors --passWithNoTests --silent --verbose",
     "test:unit": "npm test -- --watchAll -c jest-unit-config.js",
     "test:integration": "npm test -- --watch -c jest-integration-config.js",
-    "test:staged": "npm test -- --findRelatedTests --noStackTrace",
-    "test:ci": "npm test -- --coverage --noStackTrace"
+    "test:staged": "npm test -- --findRelatedTests --silent",
+    "test:ci": "npm test -- --coverage --silent"
   },
   "standard": {
     "env": [
