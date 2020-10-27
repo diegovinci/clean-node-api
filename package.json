@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --colors --passWithNoTests --silent --verbose",
-    "test:unit": "npm test -- --watch -c jest-unit-config.js",
+    "test:unit": "npm test -- --watchAll -c jest-unit-config.js",
     "test:integration": "npm test -- --watch -c jest-integration-config.js",
     "test:staged": "npm test -- --findRelatedTests --noStackTrace",
     "test:ci": "npm test -- --coverage --noStackTrace"
@@ -19,6 +19,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@shelf/jest-mongodb": "^1.2.3",
     "husky": "^4.3.0",
     "jest": "^26.5.2",
     "lint-staged": "^10.4.0",
@@ -27,6 +28,7 @@
   "dependencies": {
     "bcrypt": "^5.0.0",
     "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.2",
     "validator": "^13.1.17"
   }
 }
