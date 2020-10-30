@@ -1,7 +1,7 @@
 {
   "name": "clean-node-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Node.js restful api with tdd, design patterns and clean architecture principles.",
   "main": "src/main/index.js",
   "scripts": {
     "start": "node src/main/index.js",
@@ -17,7 +17,12 @@
       "jest"
     ]
   },
-  "keywords": [],
+  "keywords": [
+    "restful api",
+    "tdd",
+    "design patterns",
+    "clean architecture"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
