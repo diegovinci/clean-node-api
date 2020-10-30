@@ -20,18 +20,19 @@ describe('Login Routes', () => {
     await MongoHelper.disconnect()
   })
 
-  test('Should return 200 when valid credentials are provided', async () => {
+  test('Should return 201 when valid credentials are provided', async () => {
     await userModel.insertOne({
       email: 'valid_email@mail.com',
       password: bcrypt.hashSync('hashed_password', 10)
     })
+    console.log(bcrypt.hashSync('hashed_password', 10))
     await request(app)
       .post('/api/login')
       .send({
         email: 'valid_email@mail.com',
         password: 'hashed_password'
       })
-      .expect(200)
+      .expect(201)
   })
 
   test('Should return 401 when invalid credentials are provided', async () => {
