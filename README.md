@@ -14,7 +14,7 @@ An example of a simple RESTful API built with Node.js using some of the principl
 ## Setup
 
 ### Dependencies
-  - [node.js](nodejs.org)
+  - [node.js](https://github.com/nodejs)
   - [express](https://github.com/expressjs/express)
   - [mongodb](https://github.com/mongodb/node-mongodb-native)
   - [validator.Js](https://github.com/validatorjs/validatorjs)
